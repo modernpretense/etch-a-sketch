@@ -1,2 +1,8 @@
 /* Etch-a-sketch CSS */
 
+.gridsquare {
+    background-color: blueviolet;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
