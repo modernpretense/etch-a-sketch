@@ -1,8 +1,13 @@
 /* Etch-a-sketch CSS */
 
 .gridsquare {
+    display: flex;
     background-color: blueviolet;
-    border: 3px;
-    border-color: black;
     border-style: solid;
+    width: 30px;
+    height: 30px;
+}
+
+#content {
+    display: flex;
 }

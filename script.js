@@ -7,8 +7,13 @@ const content = document.querySelector('#content');
 function makeSquare() {
     const make = document.createElement('div');
     make.classList.add('gridsquare');
-
     content.appendChild(make);
 };
 
-makeSquare();
+function makeGrid(number) {
+    for (let i = 0; i < Math.pow(number,2); i++) {
+        makeSquare();
+    }
+};
+
+makeGrid(4);
