@@ -4,10 +4,12 @@
     display: flex;
     background-color: blueviolet;
     border-style: solid;
-    width: 30px;
-    height: 30px;
+    width: 62.5px;
+    height: 62.5px;
 }
 
 #content {
+    width: 1070px;
     display: flex;
+    flex-wrap: wrap;
 }
