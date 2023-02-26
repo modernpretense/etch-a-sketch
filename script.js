@@ -2,17 +2,29 @@
 
 const content = document.querySelector('#content');
 
-//const gridsquare = document.createElement('div').classList.add('gridsquare');
+let gridsize;
 
-function makeSquare() {
+function makeLine(num) {
+    const line = document.createElement('div');
+    line.classList.add('gridline');
+    line.id = (`line${num}`);
+    content.appendChild(line);
+    for (let i = 0; i < gridsize; i++) { 
+        makeSquare(line.id);
+    };
+};
+
+function makeSquare(lineinput) {
     const make = document.createElement('div');
     make.classList.add('gridsquare');
-    content.appendChild(make);
+    const lineid = document.getElementById(lineinput);
+    lineid.appendChild(make);
 };
 
 function makeGrid(number) {
-    for (let i = 0; i < Math.pow(number,2); i++) {
-        makeSquare();
+    gridsize = number;
+    for (let i = 0; i < number; i++) {
+        makeLine(i);
     }
 };
 
