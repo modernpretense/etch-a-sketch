@@ -1,12 +1,24 @@
 /* Etch-a-sketch CSS */
 
-.gridsquare {
-    background-color: blueviolet;
-    border-style: solid;
-    width: 62.5px;
-    height: 62.5px;
-}
-
 #content {
     display: flex;
+    flex-direction: column;
+    border-style: solid;
+    height: 500px;
+    width: 500px;
+}
+
+.gridline {
+    display: flex;
+    flex: 1;
+}
+
+.gridsquare {
+    flex: 1;
+    /* background-color: blueviolet;
+    border-style: solid; */  
+}
+
+.colored {
+    background-color: black;
 }

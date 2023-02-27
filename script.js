@@ -30,14 +30,26 @@ function makeGrid(number) {
     }
 }
 
-makeGrid(16);
+function promptGrid() {
+    let gridsizeinput = prompt("Please provide the grid size");
+    if (gridsizeinput <= 100) {
+        resetCanvas();
+        makeGrid(gridsizeinput);
+        startColoring();
+    } else {
+        alert ('Error: Input must be a number below 100');
+    }
+}
 
-// Coloring logic
+function startColoring() {
+    const pixels = document.querySelectorAll('.gridsquare');
+    pixels.forEach((pixel) => {
+        pixel.addEventListener('mouseenter', () => {
+            pixel.classList.add('colored');
+        });
+    });    
+}
 
-const pixels = document.querySelectorAll('.gridsquare');
-
-pixels.forEach((pixel) => {
-    pixel.addEventListener('mouseenter', () => {
-        pixel.classList.add('colored');
-    });
-}); 
+function resetCanvas() {
+    content.textContent = '';
+}
